@@ -2,6 +2,7 @@ from tkinter import *
 from functools import partial  # To prevent unwanted windows
 import random
 import re
+    
 
 class Start:
     def __init__(self, parent):
@@ -25,7 +26,7 @@ class Start:
                                            justify=LEFT, width=40, wrap=250, font= "Arial 12")
         self.start_text.grid(row=1)
 
-       # Help and Play button (row 3)
+        # Help and Play button (row 3)
         self.help_export_frame = Frame(self.start_frame)
         self.help_export_frame.grid(row=2, pady=15, padx=15)
        
@@ -41,8 +42,9 @@ class Start:
     def help(self):
         print("you asked for help")
         get_help = Help(self)
-        get_help.help_text.configure
-        
+        get_help.help_text.config
+
+
 class Help:
     def __init__(self, partner):
 
@@ -51,7 +53,7 @@ class Help:
         # disable help button
         partner.help_button.config(state=DISABLED)
         
-        #sets up child window (ie: help box)
+        # sets up child window (ie: help box)
         self.help_box = Toplevel()        
        
         # If user press cross at top, closes help and 'releases' help button
@@ -92,10 +94,6 @@ class Help:
         partner.help_button.config(state=NORMAL)
         self.help_box.destroy()
 
-
-
-    
-    
 # main routine
 if __name__ == "__main__":
         root = Tk()

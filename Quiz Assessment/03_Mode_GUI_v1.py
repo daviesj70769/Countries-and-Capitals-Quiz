@@ -23,8 +23,8 @@ class Start:
     
     def mode(self):
         print("Choose a mode!")
-        Choose_mode = Mode(self)
-        Choose_mode.mode_text.configure
+        choose_mode = Mode(self)
+        choose_mode.mode_text.configure
     
 class Mode:
     def __init__(self, partner):

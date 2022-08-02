@@ -25,7 +25,7 @@ class Start:
                                            justify=LEFT, width=40, wrap=250, font= "Arial 12")
         self.start_text.grid(row=1)
 
-       # Help and Play button (row 3)
+        # Help and Play button (row 3)
         self.help_export_frame = Frame(self.start_frame)
         self.help_export_frame.grid(row=2, pady=15, padx=15)
        
@@ -42,7 +42,8 @@ class Start:
         print("you asked for help")
         get_help = Help(self)
         get_help.help_text.configure
-        
+
+
 class Help:
     def __init__(self, partner):
 
@@ -93,9 +94,6 @@ class Help:
         self.help_box.destroy()
 
 
-
-    
-    
 # main routine
 if __name__ == "__main__":
         root = Tk()

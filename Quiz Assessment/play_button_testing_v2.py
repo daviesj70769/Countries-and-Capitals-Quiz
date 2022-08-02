@@ -34,7 +34,9 @@ class Start:
     def mode(self):
         print("Choose a mode")
         get_mode = Mode(self)
-    #   get_mode.help_text_config
+        # get_mode.help_text_config
+
+
 
 class Mode:
     def __init__(self, partner):
@@ -44,22 +46,23 @@ class Mode:
 
         self.mode_frame = Frame(self.mode_box, width=300)
         self.mode_frame.grid()
-   
-        # If user press cross at top, closes help and 'releases' help button
+
+        # If user press cross at top, closes mode selection
         self.mode_box.protocol('WM_DELETE_WINDOW', partial(self.to_quit, partner))
 
-         # Set up Help Heading (row 0)
+        # Set up Help Heading (row 0)
         self.how_heading = Label(self.mode_frame, text="Choose a mode",
                                  font="arial 18 bold")
         self.how_heading.grid(row=0)
 
-    # def close_mode(self, partner):
-    #     # Put help button back to normal...
-    #     partner.mode_button.config(state=NORMAL)
-    #     self.mode_frame.destroy()
-    
-    def to_quit(self):
-        root.destroy()  
+        # Easy Mode button
+        self.easy_button = Button(self.mode_box, text="Easy",
+                                  font="arial 18 bold", padx=10, pady=10, command=self.mode)
+        self.easy_button.grid(row=1, pady=10)
+
+    def close_mode(self, partner):
+        partner.mode_button.config(state=NORMAL)
+        self.mode_box.destroy()
 
 
 # main routine
