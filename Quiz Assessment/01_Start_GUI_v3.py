@@ -11,17 +11,17 @@ class Start:
         self.start_frame.grid()
 
         # Quiz Heading
-        self.Quiz_box_label = Label(self.start_frame, text="Flag Quiz",
+        self.Quiz_box_label = Label(self.start_frame, text="Country and Capital Quiz",
                                     font="Arial 19 bold")
         self.Quiz_box_label.grid(row=0, column=0)
 
         # Quiz text
-        self.start_text = Label(self.start_frame, text="Welcome to my Flag Quiz "
+        self.start_text = Label(self.start_frame, text="Welcome to my Country and Capitals Quiz "
                                                        "i have got a large variety of "
-                                                       "flag questions and i hope you enjoy the quiz, "
+                                                       " questions and i hope you enjoy the quiz, "
                                                        "as it is my first ever peice of code that i have done "
                                                        "majority of by myself.\n\n"
-                                                       "press play when ready!",
+                                                       "press start when ready!",
                                 justify=LEFT, width=40, wrap=250, font="Arial 12")
         self.start_text.grid(row=1)
 
@@ -29,10 +29,10 @@ class Start:
         self.help_export_frame = Frame(self.start_frame)
         self.help_export_frame.grid(row=2, pady=15, padx=15)
 
-        self.play_button = Button(self.help_export_frame, text="Play",
+        self.start_button = Button(self.help_export_frame, text="Start",
                                   bg="midnight blue", fg="white", font="Arial 15 bold",width=10,
                                   command=self.mode)
-        self.play_button.grid(row=0, column=0, padx=10, pady=10)
+        self.start_button.grid(row=0, column=0, padx=10, pady=10)
 
         self.help_button = Button(self.help_export_frame, text="Help",
                                   font="Arial 15 bold", width=10,

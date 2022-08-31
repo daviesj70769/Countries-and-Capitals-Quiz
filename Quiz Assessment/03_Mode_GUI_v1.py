@@ -24,7 +24,7 @@ class Start:
     def mode(self):
         print("Choose a mode!")
         choose_mode = Mode(self)
-        choose_mode.mode_text.configure
+        # choose_mode.mode_text.configure
     
 class Mode:
     def __init__(self, partner):
@@ -34,7 +34,7 @@ class Mode:
 
         self.mode_frame = Frame(self.mode_box)
         self.mode_frame.grid()
-       
+
         # Heading row 
         self.heading_label = Label(self.mode_box, text="Choose a mode",
                                    font="Arial 24 bold", padx=10,
